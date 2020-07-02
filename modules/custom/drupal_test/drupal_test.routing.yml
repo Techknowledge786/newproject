@@ -1,0 +1,7 @@
+drupal_test.drupal_test_controller_drupal_test:
+  path: '/drupal-test/test'
+  defaults:
+    _controller: '\Drupal\drupal_test\Controller\DrupalTestController::drupalTest'
+    _title: 'Drupal Test'
+  requirements:
+    _permission: 'access content'

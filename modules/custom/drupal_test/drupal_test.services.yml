@@ -1,0 +1,10 @@
+services:
+  drupal_test.event_default:
+    class: Drupal\drupal_test\EventSubscriber\EventDefaultSubscriber
+    arguments: ['@database', '@logger.factory', '@request_stack']
+    tags:
+      - { name: event_subscriber }
+
+  drupal_test.message_test:
+    class: Drupal\drupal_test\MessageTest
+    arguments: ['@database', '@logger.factory', '@request_stack']
